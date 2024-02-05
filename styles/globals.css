@@ -2,32 +2,135 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked {
+  color: #218380 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase{
+  color: #dbd3d8 !important;
+}
+
+*{
+  font-family: 'Inter', sans-serif !important;
+}
+
+.font{
+  font-family: 'Francois One', sans-serif !important;
+}
+
+.bg-set{
+  background: url('../public/images/backg.jpg');
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.bg-result{
+  background: url('../public/images/result.svg') ;
+  background-size: cover;
+  position: relative;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.content {
+  position: relative;
+  z-index: 1;
 }
+
+.glass-effect {
+  backdrop-filter: blur(18px);
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 16px; 
+}
+
+body, html{
+  width: 100% !important;
+  height: 100vh !important;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+
+.button-download {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #17795E;
+  background-color: #209978;
+  overflow: hidden;
+}
+
+.button-download, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+.button-download .button__text {
+  transform: translateX(22px);
+  color: #fff;
+  font-weight: 600;
+}
+
+.button-download .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: #17795E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-download .svg {
+  width: 12px;
+  fill: #fff;
+}
+
+.button-download:hover {
+  background: #17795E;
+}
+
+.button-download:hover .button__text {
+  color: transparent;
+}
+
+.button-download:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button-download:active .button__icon {
+  background-color: #146c54;
+}
+
+.button-download:active {
+  border: 1px solid #146c54;
+}
+
+
+:where(.css-dev-only-do-not-override-1b0bdye).ant-table-wrapper .ant-table-thead >tr>th{
+  background-color: #e2e5f3 !important;
+}
+
+:where(.css-dev-only-do-not-override-1b0bdye).ant-table-wrapper .ant-table-tbody >tr >td {
+  background-color: rgb(228, 243, 244) !important;
+}
+
+/* :where(.css-dev-only-do-not-override-1b0bdye).ant-table-wrapper .ant-table-tbody >tr >td{
+border: 1px solid rgb(169, 169, 169) !important;
+} */
+
